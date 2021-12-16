@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>ScintillaNet.FindReplaceDialog</id>
+    <id>ScintillaNet.FindReplaceDialog_cn</id>
     <version>1.0.3</version>
     <title>Find and Replace Dialog for ScintillaNet</title>
-    <authors>stowner</authors>
+    <authors>watrt</authors>
     <owners>Steve Towner</owners>
     <description>
-      A Find and Replace Dialog + Goto Dialog + Incremental Search for ScintillaNET v3.
+      ScintillaNet查找对话框汉化版
     </description>
     <releaseNotes>
     </releaseNotes>
     <summary>
-      A Find and Replace Dialog + Goto Dialog + Incremental Search for ScintillaNET v3.
+      ScintillaNet查找对话框汉化版
     </summary>
     <language>en-US</language>
     <projectUrl>https://nuget.org/packages/NuGet.Packager</projectUrl>

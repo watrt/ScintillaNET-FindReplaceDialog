@@ -46,16 +46,16 @@
             this.lblCurrentLine.AutoSize = true;
             this.lblCurrentLine.Location = new System.Drawing.Point(9, 13);
             this.lblCurrentLine.Name = "lblCurrentLine";
-            this.lblCurrentLine.Size = new System.Drawing.Size(102, 13);
+            this.lblCurrentLine.Size = new System.Drawing.Size(64, 17);
             this.lblCurrentLine.TabIndex = 0;
-            this.lblCurrentLine.Text = "&Current line number";
+            this.lblCurrentLine.Text = "当前行号";
             // 
             // txtCurrentLine
             // 
-            this.txtCurrentLine.Location = new System.Drawing.Point(132, 8);
+            this.txtCurrentLine.Location = new System.Drawing.Point(108, 8);
             this.txtCurrentLine.Name = "txtCurrentLine";
             this.txtCurrentLine.ReadOnly = true;
-            this.txtCurrentLine.Size = new System.Drawing.Size(63, 21);
+            this.txtCurrentLine.Size = new System.Drawing.Size(87, 24);
             this.txtCurrentLine.TabIndex = 1;
             // 
             // err
@@ -64,10 +64,10 @@
             // 
             // txtMaxLine
             // 
-            this.txtMaxLine.Location = new System.Drawing.Point(132, 33);
+            this.txtMaxLine.Location = new System.Drawing.Point(108, 33);
             this.txtMaxLine.Name = "txtMaxLine";
             this.txtMaxLine.ReadOnly = true;
-            this.txtMaxLine.Size = new System.Drawing.Size(63, 21);
+            this.txtMaxLine.Size = new System.Drawing.Size(87, 24);
             this.txtMaxLine.TabIndex = 3;
             // 
             // lblMaxLine
@@ -75,15 +75,15 @@
             this.lblMaxLine.AutoSize = true;
             this.lblMaxLine.Location = new System.Drawing.Point(9, 37);
             this.lblMaxLine.Name = "lblMaxLine";
-            this.lblMaxLine.Size = new System.Drawing.Size(117, 13);
+            this.lblMaxLine.Size = new System.Drawing.Size(64, 17);
             this.lblMaxLine.TabIndex = 2;
-            this.lblMaxLine.Text = "&Maxmimum line number";
+            this.lblMaxLine.Text = "最大行号";
             // 
             // txtGotoLine
             // 
-            this.txtGotoLine.Location = new System.Drawing.Point(132, 58);
+            this.txtGotoLine.Location = new System.Drawing.Point(108, 58);
             this.txtGotoLine.Name = "txtGotoLine";
-            this.txtGotoLine.Size = new System.Drawing.Size(63, 21);
+            this.txtGotoLine.Size = new System.Drawing.Size(87, 24);
             this.txtGotoLine.TabIndex = 5;
             // 
             // lblGotoLine
@@ -91,9 +91,9 @@
             this.lblGotoLine.AutoSize = true;
             this.lblGotoLine.Location = new System.Drawing.Point(9, 61);
             this.lblGotoLine.Name = "lblGotoLine";
-            this.lblGotoLine.Size = new System.Drawing.Size(91, 13);
+            this.lblGotoLine.Size = new System.Drawing.Size(64, 17);
             this.lblGotoLine.TabIndex = 4;
-            this.lblGotoLine.Text = "&Go to line number";
+            this.lblGotoLine.Text = "转到行号";
             // 
             // btnOK
             // 
@@ -101,7 +101,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 6;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -112,14 +112,14 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // GoToDialog
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(210, 113);
@@ -139,7 +139,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Go To Line";
+            this.Text = "转到行";
             this.Activated += new System.EventHandler(this.GoToDialog_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GoToDialog_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();

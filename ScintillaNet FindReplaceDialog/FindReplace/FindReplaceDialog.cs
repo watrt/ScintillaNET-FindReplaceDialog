@@ -153,7 +153,7 @@ namespace ScintillaNET_FindReplaceDialog
                 }
                 catch (ArgumentException ex)
                 {
-                    lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                    lblStatus.Text = "正则表达式错误：" + ex.Message;
                     return;
                 }
 
@@ -197,7 +197,7 @@ namespace ScintillaNET_FindReplaceDialog
 
             #endregion
 
-            lblStatus.Text = "Total found: " + foundCount.ToString();
+            lblStatus.Text = "找到的总数: " + foundCount.ToString();
         }
 
         private void btnFindNext_Click(object sender, EventArgs e)
@@ -230,7 +230,7 @@ namespace ScintillaNET_FindReplaceDialog
                 }
                 catch (ArgumentException ex)
                 {
-                    lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                    lblStatus.Text = "正则表达式错误：" + ex.Message;
                     return;
                 }
 
@@ -276,7 +276,7 @@ namespace ScintillaNET_FindReplaceDialog
 
             #endregion
 
-            lblStatus.Text = "Total Replaced: " + foundCount.ToString();
+            lblStatus.Text = "替换总数: " + foundCount.ToString();
         }
 
         private void btnReplaceNext_Click(object sender, EventArgs e)
@@ -299,22 +299,22 @@ namespace ScintillaNET_FindReplaceDialog
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "正则表达式错误: " + ex.Message;
                 return;
             }
 
             if (nextRange.cpMin == nextRange.cpMax)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "找不到匹配项";
             }
             else
             {
                 if (nextRange.cpMin > _scintilla.AnchorPosition)
                 {
                     if (chkSearchSelectionR.Checked)
-                        lblStatus.Text = "Search match wrapped to the beginning of the selection";
+                        lblStatus.Text = "搜索匹配到选择的开头";
                     else
-                        lblStatus.Text = "Search match wrapped to the beginning of the document";
+                        lblStatus.Text = "搜索匹配到文档的开头";
                 }
 
                 _scintilla.SetSel(nextRange.cpMin, nextRange.cpMax);
@@ -365,7 +365,7 @@ namespace ScintillaNET_FindReplaceDialog
                 newItem.Tag = item;
             }
             mnuRecentFindF.Items.Add("-");
-            mnuRecentFindF.Items.Add("Clear History");
+            mnuRecentFindF.Items.Add("清除历史记录");
             mnuRecentFindF.Show(cmdRecentFindF.PointToScreen(cmdRecentFindF.ClientRectangle.Location));
         }
 
@@ -378,7 +378,7 @@ namespace ScintillaNET_FindReplaceDialog
                 newItem.Tag = item;
             }
             mnuRecentFindR.Items.Add("-");
-            mnuRecentFindR.Items.Add("Clear History");
+            mnuRecentFindR.Items.Add("清除历史记录");
             mnuRecentFindR.Show(cmdRecentFindR.PointToScreen(cmdRecentFindR.ClientRectangle.Location));
         }
 
@@ -391,7 +391,7 @@ namespace ScintillaNET_FindReplaceDialog
                 newItem.Tag = item;
             }
             mnuRecentReplace.Items.Add("-");
-            mnuRecentReplace.Items.Add("Clear History");
+            mnuRecentReplace.Items.Add("清除历史记录");
             mnuRecentReplace.Show(cmdRecentReplace.PointToScreen(cmdRecentReplace.ClientRectangle.Location));
         }
 
@@ -532,22 +532,22 @@ namespace ScintillaNET_FindReplaceDialog
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "正则表达式错误: " + ex.Message;
                 return;
             }
 
             if (foundRange.cpMin == foundRange.cpMax)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "找不到匹配项";
             }
             else
             {
                 if (foundRange.cpMin < Scintilla.AnchorPosition)
                 {
                     if (chkSearchSelectionF.Checked)
-                        lblStatus.Text = "Search match wrapped to the beginning of the selection";
+                        lblStatus.Text = "搜索匹配包装到选择的开头";
                     else
-                        lblStatus.Text = "Search match wrapped to the beginning of the document";
+                        lblStatus.Text = "搜索匹配包装到文档的开头";
                 }
 
                 Scintilla.SetSel(foundRange.cpMin, foundRange.cpMax);
@@ -571,22 +571,22 @@ namespace ScintillaNET_FindReplaceDialog
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "正则表达式错误： " + ex.Message;
                 return;
             }
 
             if (foundRange.cpMin == foundRange.cpMax)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "找不到匹配项";
             }
             else
             {
                 if (foundRange.cpMin > Scintilla.CurrentPosition)
                 {
                     if (chkSearchSelectionF.Checked)
-                        lblStatus.Text = "Search match wrapped to the _end of the selection";
+                        lblStatus.Text = "搜索匹配到选择的尾";
                     else
-                        lblStatus.Text = "Search match wrapped to the _end of the document";
+                        lblStatus.Text = "搜索匹配到选择文档的尾";
                 }
 
                 Scintilla.SetSel(foundRange.cpMin, foundRange.cpMax);
@@ -750,22 +750,22 @@ namespace ScintillaNET_FindReplaceDialog
             }
             catch (ArgumentException ex)
             {
-                lblStatus.Text = "Error in Regular Expression: " + ex.Message;
+                lblStatus.Text = "正则表达式错误：" + ex.Message;
                 return;
             }
 
             if (nextRange.cpMin == nextRange.cpMax)
             {
-                lblStatus.Text = "Match could not be found";
+                lblStatus.Text = "找不到匹配项";
             }
             else
             {
                 if (nextRange.cpMin < Scintilla.AnchorPosition)
                 {
                     if (chkSearchSelectionR.Checked)
-                        lblStatus.Text = "Search match wrapped to the beginning of the selection";
+                        lblStatus.Text = "搜索匹配包装到选择的开头";
                     else
-                        lblStatus.Text = "Search match wrapped to the beginning of the document";
+                        lblStatus.Text = "搜索匹配包装到文档的开头";
                 }
 
                 Scintilla.SetSel(nextRange.cpMin, nextRange.cpMax);
@@ -1020,7 +1020,7 @@ namespace ScintillaNET_FindReplaceDialog
         private void mnuRecentFindF_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             //Insert the string value held in the menu items Tag field (\t, \n, etc.)
-            if (e.ClickedItem.Text == "Clear History")
+            if (e.ClickedItem.Text == "清除历史记录")
             {
                 MruFind.Clear();
             }
@@ -1033,7 +1033,7 @@ namespace ScintillaNET_FindReplaceDialog
         private void mnuRecentFindR_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             //Insert the string value held in the menu items Tag field (\t, \n, etc.)
-            if (e.ClickedItem.Text == "Clear History")
+            if (e.ClickedItem.Text == "清除历史记录")
             {
                 MruFind.Clear();
             }
@@ -1046,7 +1046,7 @@ namespace ScintillaNET_FindReplaceDialog
         private void mnuRecentReplace_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             //Insert the string value held in the menu items Tag field (\t, \n, etc.)
-            if (e.ClickedItem.Text == "Clear History")
+            if (e.ClickedItem.Text == "清除历史记录")
             {
                 MruReplace.Clear();
             }

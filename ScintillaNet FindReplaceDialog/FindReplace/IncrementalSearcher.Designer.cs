@@ -45,19 +45,19 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblFind.AutoSize = true;
             this.lblFind.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblFind.Location = new System.Drawing.Point(0, 0);
-            this.lblFind.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.lblFind.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.lblFind.Name = "lblFind";
-            this.lblFind.Size = new System.Drawing.Size(27, 22);
+            this.lblFind.Size = new System.Drawing.Size(37, 26);
             this.lblFind.TabIndex = 0;
-            this.lblFind.Text = "&Find";
+            this.lblFind.Text = "&查找";
             this.lblFind.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(33, 1);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 1, 0, 0);
+            this.txtFind.Location = new System.Drawing.Point(45, 1);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(4, 1, 0, 0);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(135, 20);
+            this.txtFind.Size = new System.Drawing.Size(179, 25);
             this.txtFind.TabIndex = 1;
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             this.txtFind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFind_KeyDown);
@@ -76,7 +76,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(259, 22);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(316, 26);
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -88,12 +88,12 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.GoToNextMessage;
-            this.btnNext.Location = new System.Drawing.Point(171, 0);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnNext.Location = new System.Drawing.Point(228, 0);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(22, 22);
             this.btnNext.TabIndex = 2;
-            this.toolTip.SetToolTip(this.btnNext, "Find Next");
+            this.toolTip.SetToolTip(this.btnNext, "下一个");
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -103,12 +103,12 @@ namespace ScintillaNET_FindReplaceDialog
             this.brnPrevious.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.brnPrevious.FlatAppearance.BorderSize = 0;
             this.brnPrevious.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.GoToPreviousMessage;
-            this.brnPrevious.Location = new System.Drawing.Point(193, 0);
+            this.brnPrevious.Location = new System.Drawing.Point(250, 0);
             this.brnPrevious.Margin = new System.Windows.Forms.Padding(0);
             this.brnPrevious.Name = "brnPrevious";
             this.brnPrevious.Size = new System.Drawing.Size(22, 22);
             this.brnPrevious.TabIndex = 3;
-            this.toolTip.SetToolTip(this.brnPrevious, "Find Previous");
+            this.toolTip.SetToolTip(this.brnPrevious, "上一个");
             this.brnPrevious.UseVisualStyleBackColor = true;
             this.brnPrevious.Click += new System.EventHandler(this.brnPrevious_Click);
             // 
@@ -121,13 +121,13 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnHighlightAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHighlightAll.ForeColor = System.Drawing.Color.SkyBlue;
             this.btnHighlightAll.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.LineColorHS;
-            this.btnHighlightAll.Location = new System.Drawing.Point(215, 0);
+            this.btnHighlightAll.Location = new System.Drawing.Point(272, 0);
             this.btnHighlightAll.Margin = new System.Windows.Forms.Padding(0);
             this.btnHighlightAll.Name = "btnHighlightAll";
             this.btnHighlightAll.Size = new System.Drawing.Size(22, 22);
             this.btnHighlightAll.TabIndex = 4;
             this.btnHighlightAll.Text = "&h";
-            this.toolTip.SetToolTip(this.btnHighlightAll, "Highlight All Matches (ALT+H)");
+            this.toolTip.SetToolTip(this.btnHighlightAll, "突出显示所有匹配(ALT+H)");
             this.btnHighlightAll.UseVisualStyleBackColor = true;
             this.btnHighlightAll.Click += new System.EventHandler(this.btnHighlightAll_Click);
             // 
@@ -138,19 +138,19 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnClearHighlights.FlatAppearance.BorderSize = 0;
             this.btnClearHighlights.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearHighlights.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.DeleteHS;
-            this.btnClearHighlights.Location = new System.Drawing.Point(237, 0);
+            this.btnClearHighlights.Location = new System.Drawing.Point(294, 0);
             this.btnClearHighlights.Margin = new System.Windows.Forms.Padding(0);
             this.btnClearHighlights.Name = "btnClearHighlights";
             this.btnClearHighlights.Size = new System.Drawing.Size(22, 22);
             this.btnClearHighlights.TabIndex = 5;
             this.btnClearHighlights.Text = "&j";
-            this.toolTip.SetToolTip(this.btnClearHighlights, "Clear Highlights (ALT+J)");
+            this.toolTip.SetToolTip(this.btnClearHighlights, "取消突出(ALT+J)");
             this.btnClearHighlights.UseVisualStyleBackColor = true;
             this.btnClearHighlights.Click += new System.EventHandler(this.btnClearHighlights_Click);
             // 
             // IncrementalSearcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -158,7 +158,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "IncrementalSearcher";
-            this.Size = new System.Drawing.Size(259, 22);
+            this.Size = new System.Drawing.Size(316, 26);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

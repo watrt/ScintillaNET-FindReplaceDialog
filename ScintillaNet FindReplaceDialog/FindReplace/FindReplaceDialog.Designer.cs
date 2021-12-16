@@ -64,6 +64,8 @@ namespace ScintillaNET_FindReplaceDialog
             this.rdoStandardF = new System.Windows.Forms.RadioButton();
             this.lblFindF = new System.Windows.Forms.Label();
             this.tpgReplace = new System.Windows.Forms.TabPage();
+            this.btnFindNextR = new System.Windows.Forms.Button();
+            this.btnFindPreviousR = new System.Windows.Forms.Button();
             this.txtReplace = new System.Windows.Forms.TextBox();
             this.txtFindR = new System.Windows.Forms.TextBox();
             this.cmdRecentReplace = new System.Windows.Forms.Button();
@@ -178,8 +180,6 @@ namespace ScintillaNET_FindReplaceDialog
             this.toolStripMenuItem51 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem50 = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnFindPreviousR = new System.Windows.Forms.Button();
-            this.btnFindNextR = new System.Windows.Forms.Button();
             this.tabAll.SuspendLayout();
             this.tpgFind.SuspendLayout();
             this.grpFindAll.SuspendLayout();
@@ -227,12 +227,12 @@ namespace ScintillaNET_FindReplaceDialog
             this.tpgFind.Controls.Add(this.rdoRegexF);
             this.tpgFind.Controls.Add(this.rdoStandardF);
             this.tpgFind.Controls.Add(this.lblFindF);
-            this.tpgFind.Location = new System.Drawing.Point(4, 22);
+            this.tpgFind.Location = new System.Drawing.Point(4, 26);
             this.tpgFind.Name = "tpgFind";
             this.tpgFind.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgFind.Size = new System.Drawing.Size(480, 244);
+            this.tpgFind.Size = new System.Drawing.Size(480, 240);
             this.tpgFind.TabIndex = 0;
-            this.tpgFind.Text = "Find";
+            this.tpgFind.Text = "查找";
             this.tpgFind.UseVisualStyleBackColor = true;
             // 
             // cmdRecentFindF
@@ -244,7 +244,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdRecentFindF.Name = "cmdRecentFindF";
             this.cmdRecentFindF.Size = new System.Drawing.Size(23, 23);
             this.cmdRecentFindF.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.cmdRecentFindF, "Show a list of recent search strings");
+            this.toolTip1.SetToolTip(this.cmdRecentFindF, "显示最近搜索字符串的列表");
             this.cmdRecentFindF.UseVisualStyleBackColor = true;
             this.cmdRecentFindF.Click += new System.EventHandler(this.cmdRecentFindF_Click);
             // 
@@ -254,7 +254,7 @@ namespace ScintillaNET_FindReplaceDialog
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFindF.Location = new System.Drawing.Point(59, 6);
             this.txtFindF.Name = "txtFindF";
-            this.txtFindF.Size = new System.Drawing.Size(370, 21);
+            this.txtFindF.Size = new System.Drawing.Size(370, 24);
             this.txtFindF.TabIndex = 13;
             // 
             // cmdExtCharAndRegExFindF
@@ -266,7 +266,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdExtCharAndRegExFindF.Size = new System.Drawing.Size(23, 23);
             this.cmdExtCharAndRegExFindF.TabIndex = 12;
             this.cmdExtCharAndRegExFindF.Text = ">";
-            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExFindF, "Show a list of extended characters");
+            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExFindF, "显示扩展字符列表 ");
             this.cmdExtCharAndRegExFindF.UseVisualStyleBackColor = true;
             this.cmdExtCharAndRegExFindF.Click += new System.EventHandler(this.cmdExtendedCharFindF_Click);
             // 
@@ -275,9 +275,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.rdoExtendedF.AutoSize = true;
             this.rdoExtendedF.Location = new System.Drawing.Point(102, 71);
             this.rdoExtendedF.Name = "rdoExtendedF";
-            this.rdoExtendedF.Size = new System.Drawing.Size(139, 17);
+            this.rdoExtendedF.Size = new System.Drawing.Size(141, 21);
             this.rdoExtendedF.TabIndex = 11;
-            this.rdoExtendedF.Text = "E&xtended (\\n, \\r, \\t, \\0)";
+            this.rdoExtendedF.Text = "扩展 (\\n, \\r, \\t, \\0)";
             this.rdoExtendedF.UseVisualStyleBackColor = true;
             this.rdoExtendedF.CheckedChanged += new System.EventHandler(this.rdoStandardF_CheckedChanged);
             // 
@@ -292,7 +292,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.grpFindAll.Size = new System.Drawing.Size(209, 65);
             this.grpFindAll.TabIndex = 8;
             this.grpFindAll.TabStop = false;
-            this.grpFindAll.Text = "Find All";
+            this.grpFindAll.Text = "查找全部";
             // 
             // btnClear
             // 
@@ -300,7 +300,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(88, 23);
             this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "C&lear";
+            this.btnClear.Text = "清除";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -310,7 +310,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnFindAll.Name = "btnFindAll";
             this.btnFindAll.Size = new System.Drawing.Size(88, 23);
             this.btnFindAll.TabIndex = 2;
-            this.btnFindAll.Text = "Find &All";
+            this.btnFindAll.Text = "查找全部";
             this.btnFindAll.UseVisualStyleBackColor = true;
             this.btnFindAll.Click += new System.EventHandler(this.btnFindAll_Click);
             // 
@@ -319,9 +319,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkHighlightMatches.AutoSize = true;
             this.chkHighlightMatches.Location = new System.Drawing.Point(6, 37);
             this.chkHighlightMatches.Name = "chkHighlightMatches";
-            this.chkHighlightMatches.Size = new System.Drawing.Size(110, 17);
+            this.chkHighlightMatches.Size = new System.Drawing.Size(86, 21);
             this.chkHighlightMatches.TabIndex = 1;
-            this.chkHighlightMatches.Text = "&Highlight Matches";
+            this.chkHighlightMatches.Text = "高亮显示";
             this.chkHighlightMatches.UseVisualStyleBackColor = true;
             // 
             // chkMarkLine
@@ -329,9 +329,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkMarkLine.AutoSize = true;
             this.chkMarkLine.Location = new System.Drawing.Point(6, 20);
             this.chkMarkLine.Name = "chkMarkLine";
-            this.chkMarkLine.Size = new System.Drawing.Size(71, 17);
+            this.chkMarkLine.Size = new System.Drawing.Size(72, 21);
             this.chkMarkLine.TabIndex = 0;
-            this.chkMarkLine.Text = "&Mark Line";
+            this.chkMarkLine.Text = "标记行";
             this.chkMarkLine.UseVisualStyleBackColor = true;
             // 
             // chkSearchSelectionF
@@ -339,9 +339,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkSearchSelectionF.AutoSize = true;
             this.chkSearchSelectionF.Location = new System.Drawing.Point(375, 71);
             this.chkSearchSelectionF.Name = "chkSearchSelectionF";
-            this.chkSearchSelectionF.Size = new System.Drawing.Size(105, 17);
+            this.chkSearchSelectionF.Size = new System.Drawing.Size(86, 21);
             this.chkSearchSelectionF.TabIndex = 6;
-            this.chkSearchSelectionF.Text = "Search Selection";
+            this.chkSearchSelectionF.Text = "搜索选择";
             this.chkSearchSelectionF.UseVisualStyleBackColor = true;
             // 
             // chkWrapF
@@ -351,9 +351,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWrapF.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkWrapF.Location = new System.Drawing.Point(375, 52);
             this.chkWrapF.Name = "chkWrapF";
-            this.chkWrapF.Size = new System.Drawing.Size(52, 17);
+            this.chkWrapF.Size = new System.Drawing.Size(86, 21);
             this.chkWrapF.TabIndex = 5;
-            this.chkWrapF.Text = "&Wrap";
+            this.chkWrapF.Text = "循环查找";
             this.chkWrapF.UseVisualStyleBackColor = true;
             // 
             // btnFindPreviousF
@@ -363,7 +363,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnFindPreviousF.Name = "btnFindPreviousF";
             this.btnFindPreviousF.Size = new System.Drawing.Size(107, 23);
             this.btnFindPreviousF.TabIndex = 9;
-            this.btnFindPreviousF.Text = "Find &Previous";
+            this.btnFindPreviousF.Text = "上一个";
             this.btnFindPreviousF.UseVisualStyleBackColor = true;
             this.btnFindPreviousF.Click += new System.EventHandler(this.btnFindPrevious_Click);
             // 
@@ -374,7 +374,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnFindNextF.Name = "btnFindNextF";
             this.btnFindNextF.Size = new System.Drawing.Size(107, 23);
             this.btnFindNextF.TabIndex = 10;
-            this.btnFindNextF.Text = "Find &Next";
+            this.btnFindNextF.Text = "下一个";
             this.btnFindNextF.UseVisualStyleBackColor = true;
             this.btnFindNextF.Click += new System.EventHandler(this.btnFindNext_Click);
             // 
@@ -389,7 +389,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.grpOptionsF.Size = new System.Drawing.Size(470, 77);
             this.grpOptionsF.TabIndex = 7;
             this.grpOptionsF.TabStop = false;
-            this.grpOptionsF.Text = "Options";
+            this.grpOptionsF.Text = "选项";
             // 
             // pnlStandardOptionsF
             // 
@@ -397,9 +397,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.pnlStandardOptionsF.Controls.Add(this.chkWholeWordF);
             this.pnlStandardOptionsF.Controls.Add(this.chkMatchCaseF);
             this.pnlStandardOptionsF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlStandardOptionsF.Location = new System.Drawing.Point(3, 17);
+            this.pnlStandardOptionsF.Location = new System.Drawing.Point(3, 20);
             this.pnlStandardOptionsF.Name = "pnlStandardOptionsF";
-            this.pnlStandardOptionsF.Size = new System.Drawing.Size(464, 57);
+            this.pnlStandardOptionsF.Size = new System.Drawing.Size(464, 54);
             this.pnlStandardOptionsF.TabIndex = 0;
             // 
             // chkWordStartF
@@ -407,9 +407,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWordStartF.AutoSize = true;
             this.chkWordStartF.Location = new System.Drawing.Point(10, 37);
             this.chkWordStartF.Name = "chkWordStartF";
-            this.chkWordStartF.Size = new System.Drawing.Size(79, 17);
+            this.chkWordStartF.Size = new System.Drawing.Size(86, 21);
             this.chkWordStartF.TabIndex = 2;
-            this.chkWordStartF.Text = "W&ord Start";
+            this.chkWordStartF.Text = "文本开头";
             this.chkWordStartF.UseVisualStyleBackColor = true;
             // 
             // chkWholeWordF
@@ -417,9 +417,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWholeWordF.AutoSize = true;
             this.chkWholeWordF.Location = new System.Drawing.Point(10, 20);
             this.chkWholeWordF.Name = "chkWholeWordF";
-            this.chkWholeWordF.Size = new System.Drawing.Size(85, 17);
+            this.chkWholeWordF.Size = new System.Drawing.Size(86, 21);
             this.chkWholeWordF.TabIndex = 1;
-            this.chkWholeWordF.Text = "Whole Wor&d";
+            this.chkWholeWordF.Text = "全词匹配";
             this.chkWholeWordF.UseVisualStyleBackColor = true;
             // 
             // chkMatchCaseF
@@ -427,9 +427,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkMatchCaseF.AutoSize = true;
             this.chkMatchCaseF.Location = new System.Drawing.Point(10, 3);
             this.chkMatchCaseF.Name = "chkMatchCaseF";
-            this.chkMatchCaseF.Size = new System.Drawing.Size(82, 17);
+            this.chkMatchCaseF.Size = new System.Drawing.Size(100, 21);
             this.chkMatchCaseF.TabIndex = 0;
-            this.chkMatchCaseF.Text = "Match &Case";
+            this.chkMatchCaseF.Text = "区分大小写";
             this.chkMatchCaseF.UseVisualStyleBackColor = true;
             // 
             // pnlRegexpOptionsF
@@ -444,9 +444,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.pnlRegexpOptionsF.Controls.Add(this.chkCultureInvariantF);
             this.pnlRegexpOptionsF.Controls.Add(this.chkCompiledF);
             this.pnlRegexpOptionsF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRegexpOptionsF.Location = new System.Drawing.Point(3, 17);
+            this.pnlRegexpOptionsF.Location = new System.Drawing.Point(3, 20);
             this.pnlRegexpOptionsF.Name = "pnlRegexpOptionsF";
-            this.pnlRegexpOptionsF.Size = new System.Drawing.Size(464, 57);
+            this.pnlRegexpOptionsF.Size = new System.Drawing.Size(464, 54);
             this.pnlRegexpOptionsF.TabIndex = 1;
             // 
             // chkSinglelineF
@@ -454,7 +454,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkSinglelineF.AutoSize = true;
             this.chkSinglelineF.Location = new System.Drawing.Point(279, 37);
             this.chkSinglelineF.Name = "chkSinglelineF";
-            this.chkSinglelineF.Size = new System.Drawing.Size(70, 17);
+            this.chkSinglelineF.Size = new System.Drawing.Size(84, 21);
             this.chkSinglelineF.TabIndex = 8;
             this.chkSinglelineF.Text = "Singleline";
             this.chkSinglelineF.UseVisualStyleBackColor = true;
@@ -464,7 +464,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkRightToLeftF.AutoSize = true;
             this.chkRightToLeftF.Location = new System.Drawing.Point(279, 20);
             this.chkRightToLeftF.Name = "chkRightToLeftF";
-            this.chkRightToLeftF.Size = new System.Drawing.Size(88, 17);
+            this.chkRightToLeftF.Size = new System.Drawing.Size(109, 21);
             this.chkRightToLeftF.TabIndex = 5;
             this.chkRightToLeftF.Text = "Right To Left";
             this.chkRightToLeftF.UseVisualStyleBackColor = true;
@@ -474,7 +474,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkMultilineF.AutoSize = true;
             this.chkMultilineF.Location = new System.Drawing.Point(279, 3);
             this.chkMultilineF.Name = "chkMultilineF";
-            this.chkMultilineF.Size = new System.Drawing.Size(64, 17);
+            this.chkMultilineF.Size = new System.Drawing.Size(76, 21);
             this.chkMultilineF.TabIndex = 2;
             this.chkMultilineF.Text = "Multiline";
             this.chkMultilineF.UseVisualStyleBackColor = true;
@@ -484,7 +484,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkIgnorePatternWhitespaceF.AutoSize = true;
             this.chkIgnorePatternWhitespaceF.Location = new System.Drawing.Point(113, 37);
             this.chkIgnorePatternWhitespaceF.Name = "chkIgnorePatternWhitespaceF";
-            this.chkIgnorePatternWhitespaceF.Size = new System.Drawing.Size(156, 17);
+            this.chkIgnorePatternWhitespaceF.Size = new System.Drawing.Size(194, 21);
             this.chkIgnorePatternWhitespaceF.TabIndex = 7;
             this.chkIgnorePatternWhitespaceF.Text = "I&gnore Pattern Whitespace";
             this.chkIgnorePatternWhitespaceF.UseVisualStyleBackColor = true;
@@ -494,7 +494,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkIgnoreCaseF.AutoSize = true;
             this.chkIgnoreCaseF.Location = new System.Drawing.Point(113, 20);
             this.chkIgnoreCaseF.Name = "chkIgnoreCaseF";
-            this.chkIgnoreCaseF.Size = new System.Drawing.Size(85, 17);
+            this.chkIgnoreCaseF.Size = new System.Drawing.Size(103, 21);
             this.chkIgnoreCaseF.TabIndex = 4;
             this.chkIgnoreCaseF.Text = "&Ignore Case";
             this.chkIgnoreCaseF.UseVisualStyleBackColor = true;
@@ -504,7 +504,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkExplicitCaptureF.AutoSize = true;
             this.chkExplicitCaptureF.Location = new System.Drawing.Point(113, 3);
             this.chkExplicitCaptureF.Name = "chkExplicitCaptureF";
-            this.chkExplicitCaptureF.Size = new System.Drawing.Size(101, 17);
+            this.chkExplicitCaptureF.Size = new System.Drawing.Size(125, 21);
             this.chkExplicitCaptureF.TabIndex = 1;
             this.chkExplicitCaptureF.Text = "E&xplicit Capture";
             this.chkExplicitCaptureF.UseVisualStyleBackColor = true;
@@ -514,7 +514,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkEcmaScriptF.AutoSize = true;
             this.chkEcmaScriptF.Location = new System.Drawing.Point(3, 37);
             this.chkEcmaScriptF.Name = "chkEcmaScriptF";
-            this.chkEcmaScriptF.Size = new System.Drawing.Size(84, 17);
+            this.chkEcmaScriptF.Size = new System.Drawing.Size(104, 21);
             this.chkEcmaScriptF.TabIndex = 6;
             this.chkEcmaScriptF.Text = "ECMA Script";
             this.chkEcmaScriptF.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkCultureInvariantF.AutoSize = true;
             this.chkCultureInvariantF.Location = new System.Drawing.Point(3, 20);
             this.chkCultureInvariantF.Name = "chkCultureInvariantF";
-            this.chkCultureInvariantF.Size = new System.Drawing.Size(108, 17);
+            this.chkCultureInvariantF.Size = new System.Drawing.Size(132, 21);
             this.chkCultureInvariantF.TabIndex = 3;
             this.chkCultureInvariantF.Text = "C&ulture Invariant";
             this.chkCultureInvariantF.UseVisualStyleBackColor = true;
@@ -535,7 +535,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkCompiledF.AutoSize = true;
             this.chkCompiledF.Location = new System.Drawing.Point(3, 3);
             this.chkCompiledF.Name = "chkCompiledF";
-            this.chkCompiledF.Size = new System.Drawing.Size(69, 17);
+            this.chkCompiledF.Size = new System.Drawing.Size(86, 21);
             this.chkCompiledF.TabIndex = 0;
             this.chkCompiledF.Text = "&Compiled";
             this.chkCompiledF.UseVisualStyleBackColor = true;
@@ -545,18 +545,18 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblSearchTypeF.AutoSize = true;
             this.lblSearchTypeF.Location = new System.Drawing.Point(8, 52);
             this.lblSearchTypeF.Name = "lblSearchTypeF";
-            this.lblSearchTypeF.Size = new System.Drawing.Size(67, 13);
+            this.lblSearchTypeF.Size = new System.Drawing.Size(64, 17);
             this.lblSearchTypeF.TabIndex = 2;
-            this.lblSearchTypeF.Text = "Search Type";
+            this.lblSearchTypeF.Text = "搜索类型";
             // 
             // rdoRegexF
             // 
             this.rdoRegexF.AutoSize = true;
             this.rdoRegexF.Location = new System.Drawing.Point(247, 71);
             this.rdoRegexF.Name = "rdoRegexF";
-            this.rdoRegexF.Size = new System.Drawing.Size(117, 17);
+            this.rdoRegexF.Size = new System.Drawing.Size(99, 21);
             this.rdoRegexF.TabIndex = 4;
-            this.rdoRegexF.Text = "Regular &Expression";
+            this.rdoRegexF.Text = "正则表达式";
             this.rdoRegexF.UseVisualStyleBackColor = true;
             this.rdoRegexF.CheckedChanged += new System.EventHandler(this.rdoStandardF_CheckedChanged);
             // 
@@ -566,10 +566,10 @@ namespace ScintillaNET_FindReplaceDialog
             this.rdoStandardF.Checked = true;
             this.rdoStandardF.Location = new System.Drawing.Point(27, 71);
             this.rdoStandardF.Name = "rdoStandardF";
-            this.rdoStandardF.Size = new System.Drawing.Size(69, 17);
+            this.rdoStandardF.Size = new System.Drawing.Size(57, 21);
             this.rdoStandardF.TabIndex = 3;
             this.rdoStandardF.TabStop = true;
-            this.rdoStandardF.Text = "&Standard";
+            this.rdoStandardF.Text = "标准";
             this.rdoStandardF.UseVisualStyleBackColor = true;
             this.rdoStandardF.CheckedChanged += new System.EventHandler(this.rdoStandardF_CheckedChanged);
             // 
@@ -578,9 +578,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblFindF.AutoSize = true;
             this.lblFindF.Location = new System.Drawing.Point(8, 10);
             this.lblFindF.Name = "lblFindF";
-            this.lblFindF.Size = new System.Drawing.Size(27, 13);
+            this.lblFindF.Size = new System.Drawing.Size(36, 17);
             this.lblFindF.TabIndex = 0;
-            this.lblFindF.Text = "&Find";
+            this.lblFindF.Text = "查找";
             // 
             // tpgReplace
             // 
@@ -604,13 +604,35 @@ namespace ScintillaNET_FindReplaceDialog
             this.tpgReplace.Controls.Add(this.rdoRegexR);
             this.tpgReplace.Controls.Add(this.rdoStandardR);
             this.tpgReplace.Controls.Add(this.lblFindR);
-            this.tpgReplace.Location = new System.Drawing.Point(4, 22);
+            this.tpgReplace.Location = new System.Drawing.Point(4, 26);
             this.tpgReplace.Name = "tpgReplace";
             this.tpgReplace.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgReplace.Size = new System.Drawing.Size(480, 244);
+            this.tpgReplace.Size = new System.Drawing.Size(480, 240);
             this.tpgReplace.TabIndex = 1;
-            this.tpgReplace.Text = "Replace";
+            this.tpgReplace.Text = "替换";
             this.tpgReplace.UseVisualStyleBackColor = true;
+            // 
+            // btnFindNextR
+            // 
+            this.btnFindNextR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFindNextR.Location = new System.Drawing.Point(251, 212);
+            this.btnFindNextR.Name = "btnFindNextR";
+            this.btnFindNextR.Size = new System.Drawing.Size(107, 23);
+            this.btnFindNextR.TabIndex = 13;
+            this.btnFindNextR.Text = "查找下一个";
+            this.btnFindNextR.UseVisualStyleBackColor = true;
+            this.btnFindNextR.Click += new System.EventHandler(this.btnFindNext_Click);
+            // 
+            // btnFindPreviousR
+            // 
+            this.btnFindPreviousR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFindPreviousR.Location = new System.Drawing.Point(251, 188);
+            this.btnFindPreviousR.Name = "btnFindPreviousR";
+            this.btnFindPreviousR.Size = new System.Drawing.Size(107, 23);
+            this.btnFindPreviousR.TabIndex = 12;
+            this.btnFindPreviousR.Text = "查找上一个";
+            this.btnFindPreviousR.UseVisualStyleBackColor = true;
+            this.btnFindPreviousR.Click += new System.EventHandler(this.btnFindPrevious_Click);
             // 
             // txtReplace
             // 
@@ -618,7 +640,7 @@ namespace ScintillaNET_FindReplaceDialog
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReplace.Location = new System.Drawing.Point(59, 28);
             this.txtReplace.Name = "txtReplace";
-            this.txtReplace.Size = new System.Drawing.Size(370, 21);
+            this.txtReplace.Size = new System.Drawing.Size(370, 24);
             this.txtReplace.TabIndex = 3;
             // 
             // txtFindR
@@ -627,7 +649,7 @@ namespace ScintillaNET_FindReplaceDialog
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFindR.Location = new System.Drawing.Point(59, 6);
             this.txtFindR.Name = "txtFindR";
-            this.txtFindR.Size = new System.Drawing.Size(370, 21);
+            this.txtFindR.Size = new System.Drawing.Size(370, 24);
             this.txtFindR.TabIndex = 1;
             // 
             // cmdRecentReplace
@@ -639,7 +661,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdRecentReplace.Name = "cmdRecentReplace";
             this.cmdRecentReplace.Size = new System.Drawing.Size(23, 23);
             this.cmdRecentReplace.TabIndex = 19;
-            this.toolTip1.SetToolTip(this.cmdRecentReplace, "Show a list of recent search strings");
+            this.toolTip1.SetToolTip(this.cmdRecentReplace, "显示最近搜索字符串的列表");
             this.cmdRecentReplace.UseVisualStyleBackColor = true;
             this.cmdRecentReplace.Click += new System.EventHandler(this.cmdRecentReplace_Click);
             // 
@@ -652,7 +674,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdExtCharAndRegExReplace.Size = new System.Drawing.Size(23, 23);
             this.cmdExtCharAndRegExReplace.TabIndex = 18;
             this.cmdExtCharAndRegExReplace.Text = ">";
-            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExReplace, "Show a list of extended characters");
+            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExReplace, "显示扩展字符列表");
             this.cmdExtCharAndRegExReplace.UseVisualStyleBackColor = true;
             this.cmdExtCharAndRegExReplace.Click += new System.EventHandler(this.cmdExtendedCharReplace_Click);
             // 
@@ -665,7 +687,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdRecentFindR.Name = "cmdRecentFindR";
             this.cmdRecentFindR.Size = new System.Drawing.Size(23, 23);
             this.cmdRecentFindR.TabIndex = 17;
-            this.toolTip1.SetToolTip(this.cmdRecentFindR, "Show a list of recent search strings");
+            this.toolTip1.SetToolTip(this.cmdRecentFindR, "显示最近搜索字符串的列表");
             this.cmdRecentFindR.UseVisualStyleBackColor = true;
             this.cmdRecentFindR.Click += new System.EventHandler(this.cmdRecentFindR_Click);
             // 
@@ -678,7 +700,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.cmdExtCharAndRegExFindR.Size = new System.Drawing.Size(23, 23);
             this.cmdExtCharAndRegExFindR.TabIndex = 16;
             this.cmdExtCharAndRegExFindR.Text = ">";
-            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExFindR, "Show a list of extended characters");
+            this.toolTip1.SetToolTip(this.cmdExtCharAndRegExFindR, "显示扩展字符列表");
             this.cmdExtCharAndRegExFindR.UseVisualStyleBackColor = true;
             this.cmdExtCharAndRegExFindR.Click += new System.EventHandler(this.cmdExtendedCharFindR_Click);
             // 
@@ -687,9 +709,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.rdoExtendedR.AutoSize = true;
             this.rdoExtendedR.Location = new System.Drawing.Point(102, 71);
             this.rdoExtendedR.Name = "rdoExtendedR";
-            this.rdoExtendedR.Size = new System.Drawing.Size(139, 17);
+            this.rdoExtendedR.Size = new System.Drawing.Size(141, 21);
             this.rdoExtendedR.TabIndex = 6;
-            this.rdoExtendedR.Text = "E&xtended (\\n, \\r, \\t, \\0)";
+            this.rdoExtendedR.Text = "扩展 (\\n, \\r, \\t, \\0)";
             this.rdoExtendedR.UseVisualStyleBackColor = true;
             this.rdoExtendedR.CheckedChanged += new System.EventHandler(this.rdoStandardR_CheckedChanged);
             // 
@@ -699,7 +721,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnReplaceAll.Name = "btnReplaceAll";
             this.btnReplaceAll.Size = new System.Drawing.Size(107, 23);
             this.btnReplaceAll.TabIndex = 11;
-            this.btnReplaceAll.Text = "Replace &All";
+            this.btnReplaceAll.Text = "替换全部";
             this.btnReplaceAll.UseVisualStyleBackColor = true;
             this.btnReplaceAll.Click += new System.EventHandler(this.btnReplaceAll_Click);
             // 
@@ -708,18 +730,18 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblReplace.AutoSize = true;
             this.lblReplace.Location = new System.Drawing.Point(8, 32);
             this.lblReplace.Name = "lblReplace";
-            this.lblReplace.Size = new System.Drawing.Size(45, 13);
+            this.lblReplace.Size = new System.Drawing.Size(36, 17);
             this.lblReplace.TabIndex = 2;
-            this.lblReplace.Text = "&Replace";
+            this.lblReplace.Text = "替换";
             // 
             // chkSearchSelectionR
             // 
             this.chkSearchSelectionR.AutoSize = true;
             this.chkSearchSelectionR.Location = new System.Drawing.Point(375, 71);
             this.chkSearchSelectionR.Name = "chkSearchSelectionR";
-            this.chkSearchSelectionR.Size = new System.Drawing.Size(105, 17);
+            this.chkSearchSelectionR.Size = new System.Drawing.Size(86, 21);
             this.chkSearchSelectionR.TabIndex = 9;
-            this.chkSearchSelectionR.Text = "Search Selection";
+            this.chkSearchSelectionR.Text = "搜索选择";
             this.chkSearchSelectionR.UseVisualStyleBackColor = true;
             // 
             // chkWrapR
@@ -729,9 +751,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWrapR.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkWrapR.Location = new System.Drawing.Point(375, 52);
             this.chkWrapR.Name = "chkWrapR";
-            this.chkWrapR.Size = new System.Drawing.Size(52, 17);
+            this.chkWrapR.Size = new System.Drawing.Size(86, 21);
             this.chkWrapR.TabIndex = 8;
-            this.chkWrapR.Text = "&Wrap";
+            this.chkWrapR.Text = "循环查找";
             this.chkWrapR.UseVisualStyleBackColor = true;
             // 
             // btnReplacePrevious
@@ -741,7 +763,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnReplacePrevious.Name = "btnReplacePrevious";
             this.btnReplacePrevious.Size = new System.Drawing.Size(107, 23);
             this.btnReplacePrevious.TabIndex = 14;
-            this.btnReplacePrevious.Text = "Replace &Previous";
+            this.btnReplacePrevious.Text = "替换";
             this.btnReplacePrevious.UseVisualStyleBackColor = true;
             this.btnReplacePrevious.Click += new System.EventHandler(this.btnReplacePrevious_Click);
             // 
@@ -752,7 +774,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnReplaceNext.Name = "btnReplaceNext";
             this.btnReplaceNext.Size = new System.Drawing.Size(107, 23);
             this.btnReplaceNext.TabIndex = 15;
-            this.btnReplaceNext.Text = "Replace &Next";
+            this.btnReplaceNext.Text = "替换下一个";
             this.btnReplaceNext.UseVisualStyleBackColor = true;
             this.btnReplaceNext.Click += new System.EventHandler(this.btnReplaceNext_Click);
             // 
@@ -767,7 +789,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.grdOptionsR.Size = new System.Drawing.Size(470, 77);
             this.grdOptionsR.TabIndex = 10;
             this.grdOptionsR.TabStop = false;
-            this.grdOptionsR.Text = "Options";
+            this.grdOptionsR.Text = "选项";
             // 
             // pnlStandardOptionsR
             // 
@@ -775,9 +797,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.pnlStandardOptionsR.Controls.Add(this.chkWholeWordR);
             this.pnlStandardOptionsR.Controls.Add(this.chkMatchCaseR);
             this.pnlStandardOptionsR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlStandardOptionsR.Location = new System.Drawing.Point(3, 17);
+            this.pnlStandardOptionsR.Location = new System.Drawing.Point(3, 20);
             this.pnlStandardOptionsR.Name = "pnlStandardOptionsR";
-            this.pnlStandardOptionsR.Size = new System.Drawing.Size(464, 57);
+            this.pnlStandardOptionsR.Size = new System.Drawing.Size(464, 54);
             this.pnlStandardOptionsR.TabIndex = 0;
             // 
             // chkWordStartR
@@ -785,9 +807,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWordStartR.AutoSize = true;
             this.chkWordStartR.Location = new System.Drawing.Point(10, 37);
             this.chkWordStartR.Name = "chkWordStartR";
-            this.chkWordStartR.Size = new System.Drawing.Size(79, 17);
+            this.chkWordStartR.Size = new System.Drawing.Size(86, 21);
             this.chkWordStartR.TabIndex = 2;
-            this.chkWordStartR.Text = "W&ord Start";
+            this.chkWordStartR.Text = "文本开始";
             this.chkWordStartR.UseVisualStyleBackColor = true;
             // 
             // chkWholeWordR
@@ -795,9 +817,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkWholeWordR.AutoSize = true;
             this.chkWholeWordR.Location = new System.Drawing.Point(10, 20);
             this.chkWholeWordR.Name = "chkWholeWordR";
-            this.chkWholeWordR.Size = new System.Drawing.Size(85, 17);
+            this.chkWholeWordR.Size = new System.Drawing.Size(86, 21);
             this.chkWholeWordR.TabIndex = 1;
-            this.chkWholeWordR.Text = "Whole Wor&d";
+            this.chkWholeWordR.Text = "全词匹配";
             this.chkWholeWordR.UseVisualStyleBackColor = true;
             // 
             // chkMatchCaseR
@@ -805,9 +827,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkMatchCaseR.AutoSize = true;
             this.chkMatchCaseR.Location = new System.Drawing.Point(10, 3);
             this.chkMatchCaseR.Name = "chkMatchCaseR";
-            this.chkMatchCaseR.Size = new System.Drawing.Size(82, 17);
+            this.chkMatchCaseR.Size = new System.Drawing.Size(100, 21);
             this.chkMatchCaseR.TabIndex = 0;
-            this.chkMatchCaseR.Text = "Match &Case";
+            this.chkMatchCaseR.Text = "区分大小写";
             this.chkMatchCaseR.UseVisualStyleBackColor = true;
             // 
             // pnlRegexpOptionsR
@@ -822,9 +844,9 @@ namespace ScintillaNET_FindReplaceDialog
             this.pnlRegexpOptionsR.Controls.Add(this.chkCultureInvariantR);
             this.pnlRegexpOptionsR.Controls.Add(this.chkCompiledR);
             this.pnlRegexpOptionsR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRegexpOptionsR.Location = new System.Drawing.Point(3, 17);
+            this.pnlRegexpOptionsR.Location = new System.Drawing.Point(3, 20);
             this.pnlRegexpOptionsR.Name = "pnlRegexpOptionsR";
-            this.pnlRegexpOptionsR.Size = new System.Drawing.Size(464, 57);
+            this.pnlRegexpOptionsR.Size = new System.Drawing.Size(464, 54);
             this.pnlRegexpOptionsR.TabIndex = 1;
             // 
             // chkSinglelineR
@@ -832,7 +854,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkSinglelineR.AutoSize = true;
             this.chkSinglelineR.Location = new System.Drawing.Point(279, 37);
             this.chkSinglelineR.Name = "chkSinglelineR";
-            this.chkSinglelineR.Size = new System.Drawing.Size(70, 17);
+            this.chkSinglelineR.Size = new System.Drawing.Size(84, 21);
             this.chkSinglelineR.TabIndex = 8;
             this.chkSinglelineR.Text = "Singleline";
             this.chkSinglelineR.UseVisualStyleBackColor = true;
@@ -842,7 +864,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkRightToLeftR.AutoSize = true;
             this.chkRightToLeftR.Location = new System.Drawing.Point(279, 20);
             this.chkRightToLeftR.Name = "chkRightToLeftR";
-            this.chkRightToLeftR.Size = new System.Drawing.Size(88, 17);
+            this.chkRightToLeftR.Size = new System.Drawing.Size(109, 21);
             this.chkRightToLeftR.TabIndex = 7;
             this.chkRightToLeftR.Text = "Right To Left";
             this.chkRightToLeftR.UseVisualStyleBackColor = true;
@@ -852,7 +874,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkMultilineR.AutoSize = true;
             this.chkMultilineR.Location = new System.Drawing.Point(279, 3);
             this.chkMultilineR.Name = "chkMultilineR";
-            this.chkMultilineR.Size = new System.Drawing.Size(64, 17);
+            this.chkMultilineR.Size = new System.Drawing.Size(76, 21);
             this.chkMultilineR.TabIndex = 6;
             this.chkMultilineR.Text = "Multiline";
             this.chkMultilineR.UseVisualStyleBackColor = true;
@@ -862,7 +884,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkIgnorePatternWhitespaceR.AutoSize = true;
             this.chkIgnorePatternWhitespaceR.Location = new System.Drawing.Point(113, 37);
             this.chkIgnorePatternWhitespaceR.Name = "chkIgnorePatternWhitespaceR";
-            this.chkIgnorePatternWhitespaceR.Size = new System.Drawing.Size(156, 17);
+            this.chkIgnorePatternWhitespaceR.Size = new System.Drawing.Size(194, 21);
             this.chkIgnorePatternWhitespaceR.TabIndex = 5;
             this.chkIgnorePatternWhitespaceR.Text = "I&gnore Pattern Whitespace";
             this.chkIgnorePatternWhitespaceR.UseVisualStyleBackColor = true;
@@ -872,7 +894,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkIgnoreCaseR.AutoSize = true;
             this.chkIgnoreCaseR.Location = new System.Drawing.Point(113, 20);
             this.chkIgnoreCaseR.Name = "chkIgnoreCaseR";
-            this.chkIgnoreCaseR.Size = new System.Drawing.Size(85, 17);
+            this.chkIgnoreCaseR.Size = new System.Drawing.Size(103, 21);
             this.chkIgnoreCaseR.TabIndex = 4;
             this.chkIgnoreCaseR.Text = "&Ignore Case";
             this.chkIgnoreCaseR.UseVisualStyleBackColor = true;
@@ -882,7 +904,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkExplicitCaptureR.AutoSize = true;
             this.chkExplicitCaptureR.Location = new System.Drawing.Point(113, 3);
             this.chkExplicitCaptureR.Name = "chkExplicitCaptureR";
-            this.chkExplicitCaptureR.Size = new System.Drawing.Size(101, 17);
+            this.chkExplicitCaptureR.Size = new System.Drawing.Size(125, 21);
             this.chkExplicitCaptureR.TabIndex = 3;
             this.chkExplicitCaptureR.Text = "E&xplicit Capture";
             this.chkExplicitCaptureR.UseVisualStyleBackColor = true;
@@ -892,7 +914,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkEcmaScriptR.AutoSize = true;
             this.chkEcmaScriptR.Location = new System.Drawing.Point(3, 37);
             this.chkEcmaScriptR.Name = "chkEcmaScriptR";
-            this.chkEcmaScriptR.Size = new System.Drawing.Size(84, 17);
+            this.chkEcmaScriptR.Size = new System.Drawing.Size(104, 21);
             this.chkEcmaScriptR.TabIndex = 2;
             this.chkEcmaScriptR.Text = "ECMA Script";
             this.chkEcmaScriptR.UseVisualStyleBackColor = true;
@@ -903,7 +925,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkCultureInvariantR.AutoSize = true;
             this.chkCultureInvariantR.Location = new System.Drawing.Point(3, 20);
             this.chkCultureInvariantR.Name = "chkCultureInvariantR";
-            this.chkCultureInvariantR.Size = new System.Drawing.Size(108, 17);
+            this.chkCultureInvariantR.Size = new System.Drawing.Size(132, 21);
             this.chkCultureInvariantR.TabIndex = 1;
             this.chkCultureInvariantR.Text = "C&ulture Invariant";
             this.chkCultureInvariantR.UseVisualStyleBackColor = true;
@@ -913,7 +935,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.chkCompiledR.AutoSize = true;
             this.chkCompiledR.Location = new System.Drawing.Point(3, 3);
             this.chkCompiledR.Name = "chkCompiledR";
-            this.chkCompiledR.Size = new System.Drawing.Size(69, 17);
+            this.chkCompiledR.Size = new System.Drawing.Size(86, 21);
             this.chkCompiledR.TabIndex = 0;
             this.chkCompiledR.Text = "&Compiled";
             this.chkCompiledR.UseVisualStyleBackColor = true;
@@ -923,18 +945,18 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblSearchTypeR.AutoSize = true;
             this.lblSearchTypeR.Location = new System.Drawing.Point(8, 52);
             this.lblSearchTypeR.Name = "lblSearchTypeR";
-            this.lblSearchTypeR.Size = new System.Drawing.Size(67, 13);
+            this.lblSearchTypeR.Size = new System.Drawing.Size(64, 17);
             this.lblSearchTypeR.TabIndex = 4;
-            this.lblSearchTypeR.Text = "Search Type";
+            this.lblSearchTypeR.Text = "查找类型";
             // 
             // rdoRegexR
             // 
             this.rdoRegexR.AutoSize = true;
             this.rdoRegexR.Location = new System.Drawing.Point(247, 71);
             this.rdoRegexR.Name = "rdoRegexR";
-            this.rdoRegexR.Size = new System.Drawing.Size(117, 17);
+            this.rdoRegexR.Size = new System.Drawing.Size(99, 21);
             this.rdoRegexR.TabIndex = 7;
-            this.rdoRegexR.Text = "Regular &Expression";
+            this.rdoRegexR.Text = "正则表达式";
             this.rdoRegexR.UseVisualStyleBackColor = true;
             this.rdoRegexR.CheckedChanged += new System.EventHandler(this.rdoStandardR_CheckedChanged);
             // 
@@ -944,10 +966,10 @@ namespace ScintillaNET_FindReplaceDialog
             this.rdoStandardR.Checked = true;
             this.rdoStandardR.Location = new System.Drawing.Point(27, 71);
             this.rdoStandardR.Name = "rdoStandardR";
-            this.rdoStandardR.Size = new System.Drawing.Size(69, 17);
+            this.rdoStandardR.Size = new System.Drawing.Size(57, 21);
             this.rdoStandardR.TabIndex = 5;
             this.rdoStandardR.TabStop = true;
-            this.rdoStandardR.Text = "&Standard";
+            this.rdoStandardR.Text = "标准";
             this.rdoStandardR.UseVisualStyleBackColor = true;
             this.rdoStandardR.CheckedChanged += new System.EventHandler(this.rdoStandardR_CheckedChanged);
             // 
@@ -956,12 +978,13 @@ namespace ScintillaNET_FindReplaceDialog
             this.lblFindR.AutoSize = true;
             this.lblFindR.Location = new System.Drawing.Point(8, 10);
             this.lblFindR.Name = "lblFindR";
-            this.lblFindR.Size = new System.Drawing.Size(27, 13);
+            this.lblFindR.Size = new System.Drawing.Size(36, 17);
             this.lblFindR.TabIndex = 0;
-            this.lblFindR.Text = "&Find";
+            this.lblFindR.Text = "查找";
             // 
             // statusStrip
             // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
             this.statusStrip.Location = new System.Drawing.Point(0, 270);
@@ -977,6 +1000,7 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             // mnuExtendedCharFindF
             // 
+            this.mnuExtendedCharFindF.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuExtendedCharFindF.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem13,
             this.nNewLineToolStripMenuItem,
@@ -985,46 +1009,47 @@ namespace ScintillaNET_FindReplaceDialog
             this.nullCharactorToolStripMenuItem});
             this.mnuExtendedCharFindF.Name = "contextMenuStrip1";
             this.mnuExtendedCharFindF.ShowImageMargin = false;
-            this.mnuExtendedCharFindF.Size = new System.Drawing.Size(175, 114);
+            this.mnuExtendedCharFindF.Size = new System.Drawing.Size(223, 124);
             this.mnuExtendedCharFindF.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem13.Tag = "\\r\\n";
             this.toolStripMenuItem13.Text = "\\r\\n Windows New Line";
             // 
             // nNewLineToolStripMenuItem
             // 
             this.nNewLineToolStripMenuItem.Name = "nNewLineToolStripMenuItem";
-            this.nNewLineToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.nNewLineToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.nNewLineToolStripMenuItem.Tag = "\\n";
             this.nNewLineToolStripMenuItem.Text = "\\n Line Feed";
             // 
             // rCarriageToolStripMenuItem
             // 
             this.rCarriageToolStripMenuItem.Name = "rCarriageToolStripMenuItem";
-            this.rCarriageToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.rCarriageToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.rCarriageToolStripMenuItem.Tag = "\\r";
             this.rCarriageToolStripMenuItem.Text = "\\r Carriage Return";
             // 
             // tTabToolStripMenuItem1
             // 
             this.tTabToolStripMenuItem1.Name = "tTabToolStripMenuItem1";
-            this.tTabToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.tTabToolStripMenuItem1.Size = new System.Drawing.Size(222, 24);
             this.tTabToolStripMenuItem1.Tag = "\\t";
             this.tTabToolStripMenuItem1.Text = "\\t Tab";
             // 
             // nullCharactorToolStripMenuItem
             // 
             this.nullCharactorToolStripMenuItem.Name = "nullCharactorToolStripMenuItem";
-            this.nullCharactorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.nullCharactorToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.nullCharactorToolStripMenuItem.Tag = "\\0";
             this.nullCharactorToolStripMenuItem.Text = "\\0 Null Character";
             // 
             // mnuRecentFindF
             // 
+            this.mnuRecentFindF.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRecentFindF.Name = "contextMenuStrip1";
             this.mnuRecentFindF.ShowImageMargin = false;
             this.mnuRecentFindF.Size = new System.Drawing.Size(36, 4);
@@ -1032,6 +1057,7 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             // mnuExtendedCharFindR
             // 
+            this.mnuExtendedCharFindR.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuExtendedCharFindR.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem14,
             this.toolStripMenuItem1,
@@ -1040,46 +1066,47 @@ namespace ScintillaNET_FindReplaceDialog
             this.toolStripMenuItem4});
             this.mnuExtendedCharFindR.Name = "contextMenuStrip1";
             this.mnuExtendedCharFindR.ShowImageMargin = false;
-            this.mnuExtendedCharFindR.Size = new System.Drawing.Size(175, 114);
+            this.mnuExtendedCharFindR.Size = new System.Drawing.Size(223, 124);
             this.mnuExtendedCharFindR.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuExtendedCharFindR_ItemClicked);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem14.Tag = "\\r\\n";
             this.toolStripMenuItem14.Text = "\\r\\n Windows New Line";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem1.Tag = "\\n";
             this.toolStripMenuItem1.Text = "\\n Line Feed";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem2.Tag = "\\r";
             this.toolStripMenuItem2.Text = "\\r Carriage Return";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem3.Tag = "\\t";
             this.toolStripMenuItem3.Text = "\\t Tab";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem4.Tag = "\\0";
             this.toolStripMenuItem4.Text = "\\0 Null Character";
             // 
             // mnuExtendedCharReplace
             // 
+            this.mnuExtendedCharReplace.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuExtendedCharReplace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem15,
             this.toolStripMenuItem5,
@@ -1088,46 +1115,47 @@ namespace ScintillaNET_FindReplaceDialog
             this.toolStripMenuItem8});
             this.mnuExtendedCharReplace.Name = "contextMenuStrip1";
             this.mnuExtendedCharReplace.ShowImageMargin = false;
-            this.mnuExtendedCharReplace.Size = new System.Drawing.Size(175, 114);
+            this.mnuExtendedCharReplace.Size = new System.Drawing.Size(223, 124);
             this.mnuExtendedCharReplace.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuExtendedCharReplace_ItemClicked);
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem15.Tag = "\\r\\n";
             this.toolStripMenuItem15.Text = "\\r\\n Windows New Line";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem5.Tag = "\\n";
             this.toolStripMenuItem5.Text = "\\n Line Feed";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem6.Tag = "\\r";
             this.toolStripMenuItem6.Text = "\\r Carriage Return";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem7.Tag = "\\t";
             this.toolStripMenuItem7.Text = "\\t Tab";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(222, 24);
             this.toolStripMenuItem8.Tag = "\\0";
             this.toolStripMenuItem8.Text = "\\0 Null Character";
             // 
             // mnuRecentFindR
             // 
+            this.mnuRecentFindR.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRecentFindR.Name = "contextMenuStrip1";
             this.mnuRecentFindR.ShowImageMargin = false;
             this.mnuRecentFindR.Size = new System.Drawing.Size(36, 4);
@@ -1135,6 +1163,7 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             // mnuRecentReplace
             // 
+            this.mnuRecentReplace.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRecentReplace.Name = "contextMenuStrip1";
             this.mnuRecentReplace.ShowImageMargin = false;
             this.mnuRecentReplace.Size = new System.Drawing.Size(36, 4);
@@ -1142,6 +1171,7 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             // mnuRegExCharFindF
             // 
+            this.mnuRegExCharFindF.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRegExCharFindF.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem9,
             this.toolStripMenuItem10,
@@ -1167,156 +1197,157 @@ namespace ScintillaNET_FindReplaceDialog
             this.toolStripMenuItem24});
             this.mnuRegExCharFindF.Name = "contextMenuStrip1";
             this.mnuRegExCharFindF.ShowImageMargin = false;
-            this.mnuRegExCharFindF.Size = new System.Drawing.Size(261, 424);
+            this.mnuRegExCharFindF.Size = new System.Drawing.Size(343, 460);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem9.Tag = ".";
             this.toolStripMenuItem9.Text = ". Any Character";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem10.Tag = "\\w";
             this.toolStripMenuItem10.Text = "\\w Alphanumeric (\\W Non-Aplhat)";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem11.Tag = "\\d";
             this.toolStripMenuItem11.Text = "\\d Digit (\\D Non-Digit)";
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem12.Tag = "\\s";
             this.toolStripMenuItem12.Text = "\\s Whitespace (\\S Non-Whitespace)";
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem16.Tag = "[a-zA-Z]";
             this.toolStripMenuItem16.Text = "[a-zA-Z] Specified Set ([^a...] Not in Set)";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem25
             // 
             this.toolStripMenuItem25.Name = "toolStripMenuItem25";
-            this.toolStripMenuItem25.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem25.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem25.Tag = "\\r\\n";
             this.toolStripMenuItem25.Text = "\\r\\n Windows New Line";
             // 
             // toolStripMenuItem26
             // 
             this.toolStripMenuItem26.Name = "toolStripMenuItem26";
-            this.toolStripMenuItem26.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem26.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem26.Tag = "\\n";
             this.toolStripMenuItem26.Text = "\\n Line Feed";
             // 
             // toolStripMenuItem27
             // 
             this.toolStripMenuItem27.Name = "toolStripMenuItem27";
-            this.toolStripMenuItem27.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem27.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem27.Tag = "\\r";
             this.toolStripMenuItem27.Text = "\\r Carriage Return";
             // 
             // toolStripMenuItem28
             // 
             this.toolStripMenuItem28.Name = "toolStripMenuItem28";
-            this.toolStripMenuItem28.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem28.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem28.Tag = "\\t";
             this.toolStripMenuItem28.Text = "\\t Tab";
             // 
             // toolStripMenuItem29
             // 
             this.toolStripMenuItem29.Name = "toolStripMenuItem29";
-            this.toolStripMenuItem29.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem29.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem29.Tag = "\\0";
             this.toolStripMenuItem29.Text = "\\0 Null Character";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem17
             // 
             this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem17.Tag = "*";
             this.toolStripMenuItem17.Text = "* Any Number of Repetitions";
             // 
             // toolStripMenuItem18
             // 
             this.toolStripMenuItem18.Name = "toolStripMenuItem18";
-            this.toolStripMenuItem18.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem18.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem18.Tag = "+";
             this.toolStripMenuItem18.Text = "+ One or More Repetitions";
             // 
             // toolStripMenuItem19
             // 
             this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem19.Tag = "?";
             this.toolStripMenuItem19.Text = "? Zero or More Repetitions";
             // 
             // toolStripMenuItem22
             // 
             this.toolStripMenuItem22.Name = "toolStripMenuItem22";
-            this.toolStripMenuItem22.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem22.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem22.Tag = "?";
             this.toolStripMenuItem22.Text = "? As Few as Possible (i.e. *?, +? or ??)";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem20
             // 
             this.toolStripMenuItem20.Name = "toolStripMenuItem20";
-            this.toolStripMenuItem20.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem20.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem20.Tag = "()";
             this.toolStripMenuItem20.Text = "( ) Numbered Capture";
             // 
             // toolStripMenuItem21
             // 
             this.toolStripMenuItem21.Name = "toolStripMenuItem21";
-            this.toolStripMenuItem21.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem21.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem21.Tag = "(?<Name>)";
             this.toolStripMenuItem21.Text = "(?<Name>) Named Capture";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem23
             // 
             this.toolStripMenuItem23.Name = "toolStripMenuItem23";
-            this.toolStripMenuItem23.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem23.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem23.Tag = "^";
             this.toolStripMenuItem23.Text = "^ Beginning of String or Line";
             // 
             // toolStripMenuItem24
             // 
             this.toolStripMenuItem24.Name = "toolStripMenuItem24";
-            this.toolStripMenuItem24.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem24.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem24.Tag = "$";
             this.toolStripMenuItem24.Text = "$ End of String or Line";
             // 
             // mnuRegExCharFindR
             // 
+            this.mnuRegExCharFindR.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRegExCharFindR.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem30,
             this.toolStripMenuItem31,
@@ -1342,156 +1373,157 @@ namespace ScintillaNET_FindReplaceDialog
             this.toolStripMenuItem47});
             this.mnuRegExCharFindR.Name = "contextMenuStrip1";
             this.mnuRegExCharFindR.ShowImageMargin = false;
-            this.mnuRegExCharFindR.Size = new System.Drawing.Size(261, 424);
+            this.mnuRegExCharFindR.Size = new System.Drawing.Size(343, 460);
             // 
             // toolStripMenuItem30
             // 
             this.toolStripMenuItem30.Name = "toolStripMenuItem30";
-            this.toolStripMenuItem30.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem30.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem30.Tag = ".";
             this.toolStripMenuItem30.Text = ". Any Character";
             // 
             // toolStripMenuItem31
             // 
             this.toolStripMenuItem31.Name = "toolStripMenuItem31";
-            this.toolStripMenuItem31.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem31.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem31.Tag = "\\w";
             this.toolStripMenuItem31.Text = "\\w Alphanumeric (\\W Non-Aplhat)";
             // 
             // toolStripMenuItem32
             // 
             this.toolStripMenuItem32.Name = "toolStripMenuItem32";
-            this.toolStripMenuItem32.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem32.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem32.Tag = "\\d";
             this.toolStripMenuItem32.Text = "\\d Digit (\\D Non-Digit)";
             // 
             // toolStripMenuItem33
             // 
             this.toolStripMenuItem33.Name = "toolStripMenuItem33";
-            this.toolStripMenuItem33.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem33.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem33.Tag = "\\s";
             this.toolStripMenuItem33.Text = "\\s Whitespace (\\S Non-Whitespace)";
             // 
             // toolStripMenuItem34
             // 
             this.toolStripMenuItem34.Name = "toolStripMenuItem34";
-            this.toolStripMenuItem34.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem34.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem34.Tag = "[a-zA-Z]";
             this.toolStripMenuItem34.Text = "[a-zA-Z] Specified Set ([^a...] Not in Set)";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem35
             // 
             this.toolStripMenuItem35.Name = "toolStripMenuItem35";
-            this.toolStripMenuItem35.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem35.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem35.Tag = "\\r\\n";
             this.toolStripMenuItem35.Text = "\\r\\n Windows New Line";
             // 
             // toolStripMenuItem36
             // 
             this.toolStripMenuItem36.Name = "toolStripMenuItem36";
-            this.toolStripMenuItem36.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem36.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem36.Tag = "\\n";
             this.toolStripMenuItem36.Text = "\\n Line Feed";
             // 
             // toolStripMenuItem37
             // 
             this.toolStripMenuItem37.Name = "toolStripMenuItem37";
-            this.toolStripMenuItem37.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem37.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem37.Tag = "\\r";
             this.toolStripMenuItem37.Text = "\\r Carriage Return";
             // 
             // toolStripMenuItem38
             // 
             this.toolStripMenuItem38.Name = "toolStripMenuItem38";
-            this.toolStripMenuItem38.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem38.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem38.Tag = "\\t";
             this.toolStripMenuItem38.Text = "\\t Tab";
             // 
             // toolStripMenuItem39
             // 
             this.toolStripMenuItem39.Name = "toolStripMenuItem39";
-            this.toolStripMenuItem39.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem39.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem39.Tag = "\\0";
             this.toolStripMenuItem39.Text = "\\0 Null Character";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem40
             // 
             this.toolStripMenuItem40.Name = "toolStripMenuItem40";
-            this.toolStripMenuItem40.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem40.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem40.Tag = "*";
             this.toolStripMenuItem40.Text = "* Any Number of Repetitions";
             // 
             // toolStripMenuItem41
             // 
             this.toolStripMenuItem41.Name = "toolStripMenuItem41";
-            this.toolStripMenuItem41.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem41.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem41.Tag = "+";
             this.toolStripMenuItem41.Text = "+ One or More Repetitions";
             // 
             // toolStripMenuItem42
             // 
             this.toolStripMenuItem42.Name = "toolStripMenuItem42";
-            this.toolStripMenuItem42.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem42.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem42.Tag = "?";
             this.toolStripMenuItem42.Text = "? Zero or More Repetitions";
             // 
             // toolStripMenuItem43
             // 
             this.toolStripMenuItem43.Name = "toolStripMenuItem43";
-            this.toolStripMenuItem43.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem43.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem43.Tag = "?";
             this.toolStripMenuItem43.Text = "? As Few as Possible (i.e. *?, +? or ??)";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem44
             // 
             this.toolStripMenuItem44.Name = "toolStripMenuItem44";
-            this.toolStripMenuItem44.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem44.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem44.Tag = "()";
             this.toolStripMenuItem44.Text = "( ) Numbered Capture";
             // 
             // toolStripMenuItem45
             // 
             this.toolStripMenuItem45.Name = "toolStripMenuItem45";
-            this.toolStripMenuItem45.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem45.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem45.Tag = "(?<Name>)";
             this.toolStripMenuItem45.Text = "(?<Name>) Named Capture";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(339, 6);
             // 
             // toolStripMenuItem46
             // 
             this.toolStripMenuItem46.Name = "toolStripMenuItem46";
-            this.toolStripMenuItem46.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem46.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem46.Tag = "^";
             this.toolStripMenuItem46.Text = "^ Beginning of String or Line";
             // 
             // toolStripMenuItem47
             // 
             this.toolStripMenuItem47.Name = "toolStripMenuItem47";
-            this.toolStripMenuItem47.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem47.Size = new System.Drawing.Size(342, 24);
             this.toolStripMenuItem47.Tag = "$";
             this.toolStripMenuItem47.Text = "$ End of String or Line";
             // 
             // mnuRegExCharReplace
             // 
+            this.mnuRegExCharReplace.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRegExCharReplace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem48,
             this.toolStripMenuItem49,
@@ -1506,110 +1538,88 @@ namespace ScintillaNET_FindReplaceDialog
             this.nameToolStripMenuItem});
             this.mnuRegExCharReplace.Name = "contextMenuStrip1";
             this.mnuRegExCharReplace.ShowImageMargin = false;
-            this.mnuRegExCharReplace.Size = new System.Drawing.Size(174, 246);
+            this.mnuRegExCharReplace.Size = new System.Drawing.Size(228, 268);
             // 
             // toolStripMenuItem48
             // 
             this.toolStripMenuItem48.Name = "toolStripMenuItem48";
-            this.toolStripMenuItem48.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem48.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem48.Tag = "$&";
             this.toolStripMenuItem48.Text = "$&& Entire Match";
             // 
             // toolStripMenuItem49
             // 
             this.toolStripMenuItem49.Name = "toolStripMenuItem49";
-            this.toolStripMenuItem49.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem49.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem49.Tag = "$1";
             this.toolStripMenuItem49.Text = "$1 Numbered Group #1";
             // 
             // toolStripMenuItem57
             // 
             this.toolStripMenuItem57.Name = "toolStripMenuItem57";
-            this.toolStripMenuItem57.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem57.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem57.Tag = "$2";
             this.toolStripMenuItem57.Text = "$2 Numbered Group #2";
             // 
             // toolStripMenuItem56
             // 
             this.toolStripMenuItem56.Name = "toolStripMenuItem56";
-            this.toolStripMenuItem56.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem56.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem56.Tag = "$3";
             this.toolStripMenuItem56.Text = "$3 Numbered Group #3";
             // 
             // toolStripMenuItem55
             // 
             this.toolStripMenuItem55.Name = "toolStripMenuItem55";
-            this.toolStripMenuItem55.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem55.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem55.Tag = "$4";
             this.toolStripMenuItem55.Text = "$4 Numbered Group #4";
             // 
             // toolStripMenuItem54
             // 
             this.toolStripMenuItem54.Name = "toolStripMenuItem54";
-            this.toolStripMenuItem54.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem54.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem54.Tag = "$5";
             this.toolStripMenuItem54.Text = "$5 Numbered Group #5";
             // 
             // toolStripMenuItem53
             // 
             this.toolStripMenuItem53.Name = "toolStripMenuItem53";
-            this.toolStripMenuItem53.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem53.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem53.Tag = "$6";
             this.toolStripMenuItem53.Text = "$6 Numbered Group #6";
             // 
             // toolStripMenuItem52
             // 
             this.toolStripMenuItem52.Name = "toolStripMenuItem52";
-            this.toolStripMenuItem52.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem52.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem52.Tag = "$7";
             this.toolStripMenuItem52.Text = "$7 Numbered Group #7";
             // 
             // toolStripMenuItem51
             // 
             this.toolStripMenuItem51.Name = "toolStripMenuItem51";
-            this.toolStripMenuItem51.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem51.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem51.Tag = "$8";
             this.toolStripMenuItem51.Text = "$8 Numbered Group #8";
             // 
             // toolStripMenuItem50
             // 
             this.toolStripMenuItem50.Name = "toolStripMenuItem50";
-            this.toolStripMenuItem50.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem50.Size = new System.Drawing.Size(227, 24);
             this.toolStripMenuItem50.Tag = "$9";
             this.toolStripMenuItem50.Text = "$9 Numbered Group #9";
             // 
             // nameToolStripMenuItem
             // 
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
             this.nameToolStripMenuItem.Text = "$(Name) Named Group";
-            // 
-            // btnFindPreviousR
-            // 
-            this.btnFindPreviousR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFindPreviousR.Location = new System.Drawing.Point(251, 188);
-            this.btnFindPreviousR.Name = "btnFindPreviousR";
-            this.btnFindPreviousR.Size = new System.Drawing.Size(107, 23);
-            this.btnFindPreviousR.TabIndex = 12;
-            this.btnFindPreviousR.Text = "Find Previous";
-            this.btnFindPreviousR.UseVisualStyleBackColor = true;
-            this.btnFindPreviousR.Click += new System.EventHandler(this.btnFindPrevious_Click);
-            // 
-            // btnFindNextR
-            // 
-            this.btnFindNextR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFindNextR.Location = new System.Drawing.Point(251, 212);
-            this.btnFindNextR.Name = "btnFindNextR";
-            this.btnFindNextR.Size = new System.Drawing.Size(107, 23);
-            this.btnFindNextR.TabIndex = 13;
-            this.btnFindNextR.Text = "Find Next";
-            this.btnFindNextR.UseVisualStyleBackColor = true;
-            this.btnFindNextR.Click += new System.EventHandler(this.btnFindNext_Click);
             // 
             // FindReplaceDialog
             // 
             this.AcceptButton = this.btnFindNextF;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 292);
             this.Controls.Add(this.tabAll);
@@ -1623,7 +1633,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.Name = "FindReplaceDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Find and Replace";
+            this.Text = "查找和替换";
             this.Activated += new System.EventHandler(this.FindReplaceDialog_Activated);
             this.Deactivate += new System.EventHandler(this.FindReplaceDialog_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FindReplaceDialog_FormClosing);
