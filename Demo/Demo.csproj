@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ScintillaNET FindReplaceDialog cn">
+      <HintPath>..\ScintillaNet FindReplaceDialog\bin\Release\ScintillaNET FindReplaceDialog cn.dll</HintPath>
+    </Reference>
     <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
       <Private>True</Private>
@@ -83,12 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ScintillaNet FindReplaceDialog\ScintillaNET FindReplaceDialog.csproj">
-      <Project>{548fd833-9a3b-41bb-9850-570afe9a91b7}</Project>
-      <Name>ScintillaNET FindReplaceDialog</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

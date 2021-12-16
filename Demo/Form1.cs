@@ -1,5 +1,5 @@
 ﻿using ScintillaNET;
-using ScintillaNET_FindReplaceDialog;
+using ScintillaNET_FindReplaceDialog_CN;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

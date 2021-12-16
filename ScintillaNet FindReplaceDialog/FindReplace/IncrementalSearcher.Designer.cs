@@ -1,4 +1,4 @@
-namespace ScintillaNET_FindReplaceDialog
+namespace ScintillaNET_FindReplaceDialog_CN
 {
     partial class IncrementalSearcher
     {
@@ -84,10 +84,10 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             this.btnNext.AutoSize = true;
             this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNext.BackgroundImage = global::ScintillaNET_FindReplaceDialog.Properties.Resources.GoToNextMessage;
+            this.btnNext.BackgroundImage = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.GoToNextMessage;
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.GoToNextMessage;
+            this.btnNext.Image = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.GoToNextMessage;
             this.btnNext.Location = new System.Drawing.Point(228, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnNext.Name = "btnNext";
@@ -102,7 +102,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.brnPrevious.AutoSize = true;
             this.brnPrevious.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.brnPrevious.FlatAppearance.BorderSize = 0;
-            this.brnPrevious.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.GoToPreviousMessage;
+            this.brnPrevious.Image = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.GoToPreviousMessage;
             this.brnPrevious.Location = new System.Drawing.Point(250, 0);
             this.brnPrevious.Margin = new System.Windows.Forms.Padding(0);
             this.brnPrevious.Name = "brnPrevious";
@@ -116,11 +116,11 @@ namespace ScintillaNET_FindReplaceDialog
             // 
             this.btnHighlightAll.AutoSize = true;
             this.btnHighlightAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHighlightAll.BackgroundImage = global::ScintillaNET_FindReplaceDialog.Properties.Resources.LineColorHS;
+            this.btnHighlightAll.BackgroundImage = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.LineColorHS;
             this.btnHighlightAll.FlatAppearance.BorderSize = 0;
             this.btnHighlightAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHighlightAll.ForeColor = System.Drawing.Color.SkyBlue;
-            this.btnHighlightAll.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.LineColorHS;
+            this.btnHighlightAll.Image = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.LineColorHS;
             this.btnHighlightAll.Location = new System.Drawing.Point(272, 0);
             this.btnHighlightAll.Margin = new System.Windows.Forms.Padding(0);
             this.btnHighlightAll.Name = "btnHighlightAll";
@@ -137,7 +137,7 @@ namespace ScintillaNET_FindReplaceDialog
             this.btnClearHighlights.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnClearHighlights.FlatAppearance.BorderSize = 0;
             this.btnClearHighlights.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearHighlights.Image = global::ScintillaNET_FindReplaceDialog.Properties.Resources.DeleteHS;
+            this.btnClearHighlights.Image = global::ScintillaNET_FindReplaceDialog_CN.Properties.Resources.DeleteHS;
             this.btnClearHighlights.Location = new System.Drawing.Point(294, 0);
             this.btnClearHighlights.Margin = new System.Windows.Forms.Padding(0);
             this.btnClearHighlights.Name = "btnClearHighlights";

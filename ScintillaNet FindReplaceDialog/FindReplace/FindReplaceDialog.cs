@@ -1,4 +1,4 @@
-namespace ScintillaNET_FindReplaceDialog
+namespace ScintillaNET_FindReplaceDialog_CN
 {
     using ScintillaNET;
     using System;

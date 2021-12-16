@@ -2,17 +2,17 @@
 <package>
   <metadata>
     <id>ScintillaNet.FindReplaceDialog_cn</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>Find and Replace Dialog for ScintillaNet</title>
     <authors>watrt</authors>
     <owners>Steve Towner</owners>
     <description>
-      ScintillaNet查找对话框汉化版
+      ScintillaNet查找对话框汉化版。
     </description>
     <releaseNotes>
     </releaseNotes>
     <summary>
-      ScintillaNet查找对话框汉化版
+      ScintillaNet查找对话框汉化版。
     </summary>
     <language>en-US</language>
     <projectUrl>https://nuget.org/packages/NuGet.Packager</projectUrl>
@@ -21,9 +21,7 @@
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <copyright>Copyright Steve Towner 2017</copyright>
     <dependencies>
-      <group targetFramework="net40">
-        <dependency id="log4net" version="1.2.10" />
-      </group>
+
     </dependencies>
     <references></references>
     <tags></tags>

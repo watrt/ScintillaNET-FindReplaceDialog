@@ -63,12 +63,8 @@
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\ScintillaNet FindReplaceDialog\bin\Release\ScintillaNET FindReplaceDialog.dll">
-      <Link>lib\ScintillaNET FindReplaceDialog.dll</Link>
-    </Content>
-    <Content Include="..\ScintillaNet FindReplaceDialog\bin\Release\ScintillaNET FindReplaceDialog.XML">
-      <Link>lib\ScintillaNET FindReplaceDialog.XML</Link>
-    </Content>
+    <Content Include="lib\ScintillaNET FindReplaceDialog cn.dll" />
+    <Content Include="lib\ScintillaNET FindReplaceDialog cn.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

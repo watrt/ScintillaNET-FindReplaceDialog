@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ScintillaNET_FindReplaceDialog.Properties {
+namespace ScintillaNET_FindReplaceDialog_CN.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ScintillaNET_FindReplaceDialog.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ScintillaNET_FindReplaceDialog.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ScintillaNET_FindReplaceDialog_CN.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
