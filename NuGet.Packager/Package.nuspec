@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ScintillaNet.FindReplaceDialog_cn</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>Find and Replace Dialog for ScintillaNet</title>
     <authors>watrt</authors>
     <owners>Steve Towner</owners>

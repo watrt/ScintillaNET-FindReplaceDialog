@@ -763,7 +763,7 @@ namespace ScintillaNET_FindReplaceDialog_CN
             this.btnReplacePrevious.Name = "btnReplacePrevious";
             this.btnReplacePrevious.Size = new System.Drawing.Size(107, 23);
             this.btnReplacePrevious.TabIndex = 14;
-            this.btnReplacePrevious.Text = "Ìæ»»";
+            this.btnReplacePrevious.Text = "Ìæ»»ÉÏÒ»¸ö";
             this.btnReplacePrevious.UseVisualStyleBackColor = true;
             this.btnReplacePrevious.Click += new System.EventHandler(this.btnReplacePrevious_Click);
             // 
